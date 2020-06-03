@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <!-- Extends the base.html template -->
 {% extends "basic_app/base.html" %}
+    <!-- Custom template filters must be loaded into the template file -->
+    {% load my_extras %}
     {% block body_block %}
         <h1>Welcome to Index</h1>
-        <h2>This is index.html page showing!</h2>
+        <!-- <h2>This is index.html page showing!</h2> -->
+        <!-- Filters are like methods for templating. They are used with pipes. -->
+        <!-- A full list of filters can be found within the Django docs -->
+        <h3>{{ text|cut:'Hello' }}</h3>
+        <h3>{{ number|add:"99" }}</h3>
     {% endblock %}
