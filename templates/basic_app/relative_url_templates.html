@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative URL Templates</title>
+</head>
+<body>
+    <h1>Welcome to Relative URL Templates</h1>
+    <!-- Uses the app_name setup in the app's urls.py and then the url path -->
+    <a href="{% url 'basic_app:other' %}">The Other Page</a>
+    <a href="{% url 'admin:index' %}">Admin Dashboard</a>
+    <a href="{% url 'basic_app:index' %}">Home</a>
+</body>
+</html>
